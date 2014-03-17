@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author Stefan
  */
-public class Elective implements Serializable{
+public class Elective implements Serializable {
 
     private String name;
     private String description;
