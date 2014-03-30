@@ -1,8 +1,17 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package dto;
 
 import java.io.Serializable;
 
-public class FirstRoundDTO implements Serializable {
+/**
+ *
+ * @author Stefan
+ */
+public class FirstRoundDTO implements Serializable{
 
     private ElectiveDTO firstPriority1;
     private ElectiveDTO firstPriority2;
@@ -10,7 +19,7 @@ public class FirstRoundDTO implements Serializable {
     private ElectiveDTO secondPriority2;
     private StudentDTO student;
 
-    public FirstRoundDTO(StudentDTO student, ElectiveDTO firstPriority1, ElectiveDTO firstPriority2, ElectiveDTO secondPriority1, ElectiveDTO secondPriority2) {
+    public FirstRoundDTO(StudentDTO student,ElectiveDTO firstPriority1, ElectiveDTO firstPriority2, ElectiveDTO secondPriority1, ElectiveDTO secondPriority2) {
         this.firstPriority1 = firstPriority1;
         this.firstPriority2 = firstPriority2;
         this.secondPriority1 = secondPriority1;
@@ -33,6 +42,8 @@ public class FirstRoundDTO implements Serializable {
     public ElectiveDTO getSecondPriority2() {
         return secondPriority2;
     }
+
+  
 
     public StudentDTO getStudent() {
         return student;

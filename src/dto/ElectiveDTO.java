@@ -12,18 +12,43 @@ import java.util.Date;
  *
  * @author adamv_000
  */
-public class ElectiveDTO implements Serializable {
-
+public class ElectiveDTO implements Serializable{
+    private Integer electiveID;
     private String title;
     private String description;
     private Date date;
+    private String proposed;
 
-    public ElectiveDTO(String Title, String Details, Date year) {
-        this.title = Title;
-        this.description = Details;
-        this.date = year;
+    public ElectiveDTO() {
+    }
+// for when Object is in the DB
+    public ElectiveDTO(Integer electiveID, String title, String description, Date date, String proposed) {
+        this.electiveID = electiveID;
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.proposed = proposed;
+    }
+// for when Object is not in the DB
+    public ElectiveDTO(String title, String description, Date date, String proposed) {
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.proposed = proposed;
     }
 
+    public ElectiveDTO(String title, String description, Date date) {
+        this.title = title;
+        this.description = description;
+        this.date = date;
+    }
+
+    public Integer getElectiveID() {
+        return electiveID;
+    }
+   
+
+ 
     public Date getDate() {
         return date;
     }
@@ -31,7 +56,6 @@ public class ElectiveDTO implements Serializable {
     public String getDetails() {
         return description;
     }
-
     public void setDetails(String Details) {
         this.description = Details;
     }
@@ -52,9 +76,13 @@ public class ElectiveDTO implements Serializable {
         this.description = description;
     }
 
+    public String getProposed() {
+        return proposed;
+    }
+
     @Override
     public String toString() {
         return "ElectiveDTO{" + "title=" + title + ", description=" + description + ", date=" + date + '}';
     }
-
+    
 }

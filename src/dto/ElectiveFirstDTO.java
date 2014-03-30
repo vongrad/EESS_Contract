@@ -12,12 +12,13 @@ import java.util.Date;
  * @author adamv_000
  */
 public class ElectiveFirstDTO extends ElectiveDTO {
-
+    private Integer electiveId;
     private int countFirstpriority;
     private int countSecondPriority;
 
-    public ElectiveFirstDTO(String Title, String Details, Date year, int countFirstPriority, int countSecondPriority) {
-        super(Title, Details, year);
+    public ElectiveFirstDTO(Integer electiveId,String Title, String Details, Date year, String proposed, int countFirstPriority, int countSecondPriority) {
+        super(Title, Details, year, proposed);
+        this.electiveId=electiveId;
         this.countFirstpriority = countFirstPriority;
         this.countSecondPriority = countSecondPriority;
     }
@@ -29,4 +30,9 @@ public class ElectiveFirstDTO extends ElectiveDTO {
     public int getCountSecondPriority() {
         return countSecondPriority;
     }
+
+    public Integer getElectiveId() {
+        return electiveId;
+    }
+    
 }

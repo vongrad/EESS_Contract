@@ -15,6 +15,8 @@ public interface DBManagerRemote {
 
     Collection<ElectiveFirstDTO> getFirstElectives();
 
+    Collection<SecondRoundDTO> getSecondRoundVote();
+
     void addFirstRndEle(ElectiveFirstDTO elective);
 
     boolean addSecondRndStudentChoice(SecondRoundDTO secondRound);
