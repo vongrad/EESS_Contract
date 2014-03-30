@@ -11,16 +11,29 @@ import java.io.Serializable;
  *
  * @author Stefan
  */
-public class StudentDTO implements Serializable {
+public class StudentWithElectivesDTO implements Serializable {
 
     private String firstName;
     private String lastName;
     private String cpr;
-    
-    public StudentDTO(String firstName, String lastName, String cpr) {
+    private ElectiveSecondDTO primaryElective;
+    private ElectiveSecondDTO secondaryElective;
+
+    public StudentWithElectivesDTO(String firstName, String lastName, String cpr, ElectiveSecondDTO primaryElective, ElectiveSecondDTO secondaryElective) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cpr = cpr;
+        this.primaryElective = primaryElective;
+        this.secondaryElective = secondaryElective;
+    }
+
+
+    public ElectiveSecondDTO getPrimaryElective() {
+        return primaryElective;
+    }
+
+    public ElectiveSecondDTO getSecondaryElective() {
+        return secondaryElective;
     }
 
     public String getFirstName() {

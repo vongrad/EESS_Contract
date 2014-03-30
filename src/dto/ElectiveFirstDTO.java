@@ -16,8 +16,8 @@ public class ElectiveFirstDTO extends ElectiveDTO {
     private int countFirstpriority;
     private int countSecondPriority;
 
-    public ElectiveFirstDTO(int electiveId,String Title, String Details, Date year, String proposed, int countFirstPriority, int countSecondPriority) {
-        super(electiveId,Title, Details, year, proposed);
+    public ElectiveFirstDTO(int electiveId,String Title, String Details, Date year, String proposed, int countFirstPriority, int countSecondPriority,TeacherDTO teacher) {
+        super(electiveId,Title, Details, year, proposed,teacher);
         this.countFirstpriority = countFirstPriority;
         this.countSecondPriority = countSecondPriority;
     }
