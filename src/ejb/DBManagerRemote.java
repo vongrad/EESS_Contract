@@ -42,7 +42,6 @@ public interface DBManagerRemote {
     boolean approveElective(int[] electiveIds);
 
     boolean isElective(int id);
-    
-    public void restoreVoteTables();
 
+    public void restoreVoteTables();
 }

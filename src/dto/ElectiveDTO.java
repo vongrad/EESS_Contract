@@ -19,12 +19,11 @@ public class ElectiveDTO implements Serializable {
     private String description;
     private Date date;
     private String proposed;
-
+    private TeacherDTO teacher;
     public ElectiveDTO() {
     }
 // for when Object is in the DB
-
-    public ElectiveDTO(Integer electiveID, String title, String description, Date date, String proposed) {
+    public ElectiveDTO(int electiveID, String title, String description, Date date, String proposed ,TeacherDTO teacher) {
         this.electiveID = electiveID;
         this.title = title;
         this.description = description;
@@ -32,8 +31,7 @@ public class ElectiveDTO implements Serializable {
         this.proposed = proposed;
     }
 // for when Object is not in the DB
-
-    public ElectiveDTO(String title, String description, Date date, String proposed) {
+    public ElectiveDTO(String title, String description, Date date, String proposed,TeacherDTO teacher) {
         this.title = title;
         this.description = description;
         this.date = date;
@@ -47,14 +45,21 @@ public class ElectiveDTO implements Serializable {
         this.proposed = proposed;
     }
 
-    public ElectiveDTO(String title, String description, Date date) {
+    public ElectiveDTO(String title, String description, Date date,TeacherDTO teacher) {
         this.title = title;
         this.description = description;
         this.date = date;
     }
 
-    public Integer getElectiveID() {
+    public int getElectiveID() {
         return electiveID;
+    }
+     public int getElectiveId() {
+        return electiveID;
+    }
+
+    public TeacherDTO getTeacher() {
+        return teacher;
     }
 
     public Date getDate() {
