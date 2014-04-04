@@ -12,7 +12,8 @@ import java.util.Date;
  *
  * @author adamv_000
  */
-public class ElectiveDTO implements Serializable{
+public class ElectiveDTO implements Serializable {
+
     private Integer electiveID;
     private String title;
     private String description;
@@ -22,6 +23,7 @@ public class ElectiveDTO implements Serializable{
     public ElectiveDTO() {
     }
 // for when Object is in the DB
+
     public ElectiveDTO(Integer electiveID, String title, String description, Date date, String proposed) {
         this.electiveID = electiveID;
         this.title = title;
@@ -30,10 +32,18 @@ public class ElectiveDTO implements Serializable{
         this.proposed = proposed;
     }
 // for when Object is not in the DB
+
     public ElectiveDTO(String title, String description, Date date, String proposed) {
         this.title = title;
         this.description = description;
         this.date = date;
+        this.proposed = proposed;
+    }
+
+    public ElectiveDTO(int electiveID, String title, String description, String proposed) {
+        this.electiveID = electiveID;
+        this.title = title;
+        this.description = description;
         this.proposed = proposed;
     }
 
@@ -46,9 +56,7 @@ public class ElectiveDTO implements Serializable{
     public Integer getElectiveID() {
         return electiveID;
     }
-   
 
- 
     public Date getDate() {
         return date;
     }
@@ -56,6 +64,7 @@ public class ElectiveDTO implements Serializable{
     public String getDetails() {
         return description;
     }
+
     public void setDetails(String Details) {
         this.description = Details;
     }
@@ -80,9 +89,21 @@ public class ElectiveDTO implements Serializable{
         return proposed;
     }
 
+    public void setProposed(String proposed) {
+        this.proposed = proposed;
+    }
+
+    public void setElectiveID(Integer electiveID) {
+        this.electiveID = electiveID;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "ElectiveDTO{" + "title=" + title + ", description=" + description + ", date=" + date + '}';
     }
-    
+
 }

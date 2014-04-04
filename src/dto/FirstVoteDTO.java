@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dto;
 
 import java.io.Serializable;
 
 /**
  *
- * @author adamv_000
+ * @author Stefan
  */
-public class SecondRoundDTO implements Serializable{
+public class FirstVoteDTO implements Serializable{
 
-    private ElectiveSecondDTO firstPriority1;
-    private ElectiveSecondDTO firstPriority2;
-    private ElectiveSecondDTO secondPriority1;
-    private ElectiveSecondDTO secondPriority2;
+    private ElectiveDTO firstPriority1;
+    private ElectiveDTO firstPriority2;
+    private ElectiveDTO secondPriority1;
+    private ElectiveDTO secondPriority2;
     private StudentDTO student;
 
-    public SecondRoundDTO(ElectiveSecondDTO firstPriority1, ElectiveSecondDTO firstPriority2, ElectiveSecondDTO secondPriority1, ElectiveSecondDTO secondPriority2, StudentDTO student) {
+    public FirstVoteDTO(StudentDTO student,ElectiveDTO firstPriority1, ElectiveDTO firstPriority2, ElectiveDTO secondPriority1, ElectiveDTO secondPriority2) {
         this.firstPriority1 = firstPriority1;
         this.firstPriority2 = firstPriority2;
         this.secondPriority1 = secondPriority1;
@@ -28,21 +27,23 @@ public class SecondRoundDTO implements Serializable{
         this.student = student;
     }
 
-    public ElectiveSecondDTO getFirstPriority1() {
+    public ElectiveDTO getFirstPriority1() {
         return firstPriority1;
     }
 
-    public ElectiveSecondDTO getFirstPriority2() {
+    public ElectiveDTO getFirstPriority2() {
         return firstPriority2;
     }
 
-    public ElectiveSecondDTO getSecondPriority1() {
+    public ElectiveDTO getSecondPriority1() {
         return secondPriority1;
     }
 
-    public ElectiveSecondDTO getSecondPriority2() {
+    public ElectiveDTO getSecondPriority2() {
         return secondPriority2;
     }
+
+  
 
     public StudentDTO getStudent() {
         return student;

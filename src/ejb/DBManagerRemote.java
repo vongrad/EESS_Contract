@@ -11,15 +11,38 @@ public interface DBManagerRemote {
 
     Collection<StudentDTO> getStudents();
 
-    Collection<ElectiveDTO> getProposedElectives();
+    //Using getSuggestedElectives() instead
+    //Collection<ElectiveDTO> getProposedElectives();
+    Collection<ElectiveDTO> getSuggestedElectives();
 
-    Collection<ElectiveFirstDTO> getFirstElectives();
+    Collection<ElectiveFirstDTO> getFirstRndElectives();
 
-    Collection<SecondRoundDTO> getSecondRoundVote();
+    Collection<FirstVoteDTO> getFirstRoundVote();
 
-    void addFirstRndEle(ElectiveFirstDTO elective);
+    Collection<SecondVoteDTO> getSecondRoundVote();
 
-    boolean addSecondRndStudentChoice(SecondRoundDTO secondRound);
+    boolean addElective(ElectiveDTO elective);
 
-    boolean addFirstRndStudentChoice(FirstRoundDTO firstRound);
+    boolean removeElective(int electiveId);
+
+    boolean addFirstRndStudentChoice(FirstVoteDTO firstRound);
+
+    boolean addSecondRndStudentChoice(SecondVoteDTO secondRound);
+
+    boolean setTaughtElectives(int[] electiveId);
+
+    boolean assignStudentElectives(Collection<StudentElectiveDTO> studentEle);
+
+    boolean isTaught(int electiveId);
+
+    boolean isApproved(int electiveId);
+
+    boolean objectExistsInDb(Class c, Object id);
+
+    boolean approveElective(int[] electiveIds);
+
+    boolean isElective(int id);
+    
+    public void restoreVoteTables();
+
 }
