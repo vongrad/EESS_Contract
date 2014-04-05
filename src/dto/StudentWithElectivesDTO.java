@@ -27,7 +27,6 @@ public class StudentWithElectivesDTO implements Serializable {
         this.secondaryElective = secondaryElective;
     }
 
-
     public ElectiveSecondDTO getPrimaryElective() {
         return primaryElective;
     }

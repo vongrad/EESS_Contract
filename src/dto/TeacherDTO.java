@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dto;
 
 import java.util.Collection;
@@ -13,10 +12,11 @@ import java.util.Collection;
  * @author Stefan
  */
 public class TeacherDTO {
- private String CPR;
- private String firstName;
- private String lastName;
- private Collection<SkillDTO> skills;
+
+    private String CPR;
+    private String firstName;
+    private String lastName;
+    private Collection<SkillDTO> skills;
 
     public String getCPR() {
         return CPR;
@@ -40,5 +40,5 @@ public class TeacherDTO {
         this.lastName = lastName;
         this.skills = skills;
     }
-    
+
 }

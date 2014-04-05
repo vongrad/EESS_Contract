@@ -15,11 +15,12 @@ public class ElectiveFinalDTO extends ElectiveDTO {
 
     private String pool;
     private TeacherDTO teacher;
-    public ElectiveFinalDTO(Integer electiveId, String Title, String Details, Date year, String proposed, String pool,TeacherDTO teacher) {
-     super(electiveId,Title, Details, year, proposed,teacher);
-         this.pool = pool;
-         this.teacher=teacher;
-        
+
+    public ElectiveFinalDTO(Integer electiveId, String Title, String Details, Date year, String proposed, String pool, TeacherDTO teacher) {
+        super(electiveId, Title, Details, year, proposed, teacher);
+        this.pool = pool;
+        this.teacher = teacher;
+
     }
 
     public String getPool() {

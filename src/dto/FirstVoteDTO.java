@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author Stefan
  */
-public class FirstVoteDTO implements Serializable{
+public class FirstVoteDTO implements Serializable {
 
     private ElectiveDTO firstPriority1;
     private ElectiveDTO firstPriority2;
@@ -19,7 +19,7 @@ public class FirstVoteDTO implements Serializable{
     private ElectiveDTO secondPriority2;
     private StudentDTO student;
 
-    public FirstVoteDTO(StudentDTO student,ElectiveDTO firstPriority1, ElectiveDTO firstPriority2, ElectiveDTO secondPriority1, ElectiveDTO secondPriority2) {
+    public FirstVoteDTO(StudentDTO student, ElectiveDTO firstPriority1, ElectiveDTO firstPriority2, ElectiveDTO secondPriority1, ElectiveDTO secondPriority2) {
         this.firstPriority1 = firstPriority1;
         this.firstPriority2 = firstPriority2;
         this.secondPriority1 = secondPriority1;
@@ -42,8 +42,6 @@ public class FirstVoteDTO implements Serializable{
     public ElectiveDTO getSecondPriority2() {
         return secondPriority2;
     }
-
-  
 
     public StudentDTO getStudent() {
         return student;

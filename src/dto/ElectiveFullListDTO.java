@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dto;
 
 import java.util.Collection;
@@ -14,7 +13,8 @@ import java.util.Date;
  * @author Stefan
  */
 public class ElectiveFullListDTO {
-  private int electiveID;
+
+    private int electiveID;
     private String title;
     private String description;
     private Date date;
@@ -59,5 +59,5 @@ public class ElectiveFullListDTO {
     public Collection<StudentDTO> getStdentList() {
         return stdentList;
     }
-    
+
 }

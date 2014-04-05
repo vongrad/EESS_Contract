@@ -16,7 +16,7 @@ public class StudentDTO implements Serializable {
     private String firstName;
     private String lastName;
     private String cpr;
-    
+
     public StudentDTO(String firstName, String lastName, String cpr) {
         this.firstName = firstName;
         this.lastName = lastName;

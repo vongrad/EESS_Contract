@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author adamv_000
  */
-public class StudentElectiveDTO implements Serializable{
+public class StudentElectiveDTO implements Serializable {
 
     private int elective_id;
     private String CPR;
