@@ -5,11 +5,13 @@
  */
 package dto;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Stefan
  */
-public class SkillDTO {
+public class SkillDTO implements Serializable {
 
     private int skillId;
     private String skillName;

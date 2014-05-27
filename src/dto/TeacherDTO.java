@@ -5,13 +5,14 @@
  */
 package dto;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Stefan
  */
-public class TeacherDTO {
+public class TeacherDTO implements Serializable {
 
     private String CPR;
     private String firstName;
