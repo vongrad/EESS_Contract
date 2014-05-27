@@ -10,12 +10,16 @@ public interface DBManagerRemote {
     void addThings();
 
     Collection<StudentDTO> getStudents();
-
+    
+    Collection<TeacherDTO> getTeachers();
+    
     //Using getSuggestedElectives() instead
     //Collection<ElectiveDTO> getProposedElectives();
     Collection<ElectiveDTO> getSuggestedElectives();
 
     Collection<ElectiveFirstDTO> getFirstRndElectives();
+    Collection<ElectiveSecondDTO> getSecondRndElectivesA();
+    Collection<ElectiveSecondDTO> getSecondRndElectivesB();
 
     Collection<FirstVoteDTO> getFirstRoundVote();
 
